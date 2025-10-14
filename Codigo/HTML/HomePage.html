@@ -1,20 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "StyleSheet" href = "HomePage.css"
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniMarket - Marketplace Sustentável para Estudantes</title>
+  <meta name="description" content="UniMarket - A plataforma de economia circular para estudantes universitários brasileiros. Compre e venda com segurança no seu campus.">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <title>Document</title>
+  <style>
+    :root {
+      --primary: #d96c80;
+      --secondary: #bfb74b;
+      --accent: #bf2a52;
+      --text-dark: #222;
+      --text-muted: #666;
+      --surface: #f9f9fb;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: var(--surface);
+      color: var(--text-dark);
+    }
+
+    .btn-primary-custom {
+      background-color: var(--primary);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .btn-primary-custom:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn-outline-custom {
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .btn-outline-custom:hover {
+      background-color: var(--secondary);
+      color: #fff;
+    }
+
+    .section-title {
+      color: var(--text-dark);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero {
+      background: linear-gradient(137deg, #f2ae2e37, #bf2a5237);
+      padding: 5rem 0;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .card-category {
+      border: none;
+      border-radius: 1rem;
+      background: #fff;
+      transition: all .3s ease;
+    }
+
+    .card-category:hover {
+      box-shadow: 0 8px 24px rgba(234, 102, 111, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .card-category .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #111;
+      color: #bbb;
+      padding: 3rem 0;
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+    
+    .bg-coracao {
+      background-color: #d96c80;
+    }
+    
+    .bg-caixa {
+      background-color: #bf2a52;
+    }
+
+    .bg-dolar {
+      background-color: #bfb74b;
+    
+    }
+    .bg-pessoa {
+      background-color: #f2ae2e;
+    }
+
+    .text-coracao {
+      color: #d96c80;
+    }
+
+    .text-caixa {
+      color: #bf2a52;
+    }
+
+    .text-dolar {
+      color: #bfb74b;
+    }
+
+    .text-pessoa {
+      color: #f2ae2e;
+    }
+    
+    .logo{
+      max-width: 80px;
+    }
+    
+
+  </style>
 </head>
+
 <body>
-    <div>
-        
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="homepage.html">
+        <img class= "logo me-1" src="/Codigo/Imagens/LogoUniMercado.png" alt="Logo UniMarket" > 
+        <span class="fw-bold fs-4 text-primary"> <Span style="color: #bf2a52">Uni</Span><span style=" color: #f2ae2e">Market</span>
+      </a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Categorias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category_pages.html">Eletrônicos</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Materiais Acadêmicos</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Móveis</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Livros</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
+        </ul>
+
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar produtos..." 
+        </form>
+
+        <a href="user_dashboard.html" class="text-dark me-3"><i class="bi bi-person fs-5"></i></a>
+        <a href="checkout.html" class="text-dark position-relative">
+          <i class="bi bi-cart fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
+      </div>
     </div>
+  </nav>
 
+  <!-- Hero -->
+  <section class="hero text-center text-md-start">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h1 class="fw-bold display-5 mb-3">Economia circular no <span style="color: #d96c80">campus</span></h1>
+          <p class="lead text-muted mb-4">Compre e revenda com segurança da sua casa. Um lugar para todos os desejos universitarios.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="category_pages.html" class="btn btn-primary-custom px-4 py-2">Explorar Produtos</a>
+            <a href="user_dashboard.html" class="btn btn-outline-custom px-4 py-2">Anunciar Agora</a>
+          </div>
 
+          <div class="row text-center mt-5 border-top pt-4">
+            <div class="col">
+              <h4 class="text-caixa fw-bold">15.2k+</h4>
+              <p class="small text-muted mb-0">Estudantes ativos</p>
+            </div>
+            <div class="col">
+              <h4 class="text-dolar fw-bold">8.7k+</h4>
+              <p class="small text-muted mb-0">Produtos vendidos</p>
+            </div>
+            <div class="col">
+              <h4 class="text-warning fw-bold">98%</h4>
+              <p class="small text-muted mb-0">Satisfação</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format" class="img-fluid rounded-4 shadow-lg" alt="Estudantes">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="py-5" style="background: #f2e9ce45">
+    <div class="container text-center">
+      <h2 class="section-title">Explore pelas <span style= 'color: #f2ae2e'>Categorias</span></h2>
+      <p class="text-muted mb-5">Encontre exatamente o que você precisa</p>
+
+      <div class="row g-4">
+        <div class="col-6 col-lg-3" id="CategoriaEletronicos">
+          <a href="category_pages.html" class="text-decoration-none text-dark">
+            <div class="card-category p-4" style="background: rgb(249, 249, 249);">
+              <div class="icon" style="background: #bf2a52;"><i class="bi bi-laptop fs-3"></i></div>
+              <h5>Eletrônicos</h5>
+              <p class="small text-muted">Notebooks, tablets, smartphones</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="category_pages.html" class="text-decoration-none text-dark">
+            <div class="card-category p-4" style="background: rgb(249, 249, 249);">
+              <div class="icon" style="background: #bfb74b;"><i class="bi bi-book fs-3"></i></div>
+              <h5>Materiais Acadêmicos</h5>
+              <p class="small text-muted">Calculadoras, materiais de laboratório</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="category_pages.html" class="text-decoration-none text-dark">
+            <div class="card-category p-4" style="background: rgb(249, 249, 249);">
+              <div class="icon" style="background: #f2ae2e;"><i class="bi bi-bookshelf fs-3"></i></div>
+              <h5>Móveis</h5>
+              <p class="small text-muted">Mesas, cadeiras, sofás</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a href="category_pages.html" class="text-decoration-none text-dark">
+            <div class="card-category p-4" style="background: rgb(249, 249, 249);">
+              <div class="icon" style= "background: #d96c80;"><i class="bi bi-journal-text fs-3 text-white"></i></div>
+              <h5>Livros</h5>
+              <p class="small text-muted">Didáticos e literatura</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impacto -->
+  <section class="py-5" style="background: #f2e9ce45">
+    <div class="container text-center">
+      <h2 class="section-title">Nosso Impacto <span style="color: var(--accent)">Sustentável</span></h2>
+      <p class="text-muted mb-5">Juntos, estamos construindo um futuro mais sustentável</p>
+
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="icon bg-coracao mx-auto mb-3"><i class="bi bi-heart-fill fs-4 text-white"></i></div>
+          <h4 class="text-coracao fw-bold">2.3 ton</h4>
+          <p class="small text-muted">CO₂ evitado</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="icon bg-caixa mx-auto mb-3"><i class="bi bi-box-seam fs-4 text-white"></i></div>
+          <h4 class="text-caixa fw-bold">8.7k</h4>
+          <p class="small text-muted">Produtos reutilizados</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="icon bg-dolar mx-auto mb-3"><i class="bi bi-cash-coin fs-4 text-white"></i></div>
+          <h4 class="text-dolar fw-bold">R$ 1.2M</h4>
+          <p class="small text-muted">Economizados</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="icon bg-pessoa mx-auto mb-3"><i class="bi bi-people-fill fs-4 text-white"></i></div>
+          <h4 class="text-pessoa fw-bold">15.2k</h4>
+          <p class="small text-muted">Estudantes conectados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <h5 class="text-white">UniMarket</h5>
+          <p class="small">Transformando consumo estudantil em impacto sustentável através da economia circular no campus.</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Links Rápidos</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Categorias</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Eletrônicos</a></li>
+            <li><a href="#">Materiais Acadêmicos</a></li>
+            <li><a href="#">Móveis</a></li>
+            <li><a href="#">Livros</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Contato</h6>
+          <ul class="list-unstyled small">
+            <li>contato@unimarket.com.br</li>
+            <li>(11) 9999-9999</li>
+            <li>São Paulo, SP</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <p class="text-center small text-muted mb-0">© 2025 UniMarket. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

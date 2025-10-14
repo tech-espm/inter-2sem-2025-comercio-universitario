@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - UniMarket | Economia Circular no Campus</title>
+  <meta name="description"
+    content="Conheça a história da UniMarket e nosso compromisso com os Objetivos de Desenvolvimento Sustentável. Transformando consumo estudantil em impacto sustentável." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #667eea;
+      --secondary: #764ba2;
+      --accent: #ffb703;
+      --success: #4caf50;
+      --warning: #f4a261;
+      --text-dark: #222;
+      --text-light: #666;
+      --surface: #f9f9fb;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: #fff;
+      color: var(--text-dark);
+    }
+
+    /* Navbar */
+    .navbar-brand span {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #fff;
+      padding: 6rem 1rem;
+      text-align: center;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    /* ODS Cards */
+    .ods-card {
+      border: none;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .ods-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Impact Section */
+    .impact-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Timeline */
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      background-color: #ddd;
+      top: 0;
+      bottom: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .timeline-dot {
+      width: 18px;
+      height: 18px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 0);
+      border: 4px solid #fff;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 3rem 1rem;
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .btn-primary-custom {
+      background-color: var(--primary);
+      border: none;
+    }
+
+    .btn-primary-custom:hover {
+      background-color: var(--secondary);
+    }
+
+    .logo{
+      max-width: 80px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="homepage.html">
+        <img class= "logo me-1" src="/Codigo/Imagens/LogoUniMercado.png" alt="Logo UniMarket" > 
+        <span class="fw-bold fs-4 text-primary"> <Span style="color: #bf2a52">Uni</Span><span style=" color: #f2ae2e">Market</span>
+      </a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Categorias</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category_pages.html">Eletrônicos</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Materiais Acadêmicos</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Móveis</a></li>
+              <li><a class="dropdown-item" href="category_pages.html">Livros</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
+        </ul>
+
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar produtos..." 
+        </form>
+
+        <a href="user_dashboard.html" class="text-dark me-3"><i class="bi bi-person fs-5"></i></a>
+        <a href="checkout.html" class="text-dark position-relative">
+          <i class="bi bi-cart fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-3">Transformando <span>consumo</span> em impacto</h1>
+      <p class="lead mx-auto w-75">Somos a ponte entre a necessidade financeira estudantil e a consciência ambiental,
+        criando uma comunidade onde cada transação gera valor social e sustentável.</p>
+      <div class="bg-light text-dark rounded-4 p-4 mt-5 mx-auto w-75">
+        <h2 class="fw-bold mb-3">Nossa Missão</h2>
+        <p>Empoderar estudantes universitários brasileiros através de uma economia circular que transforma necessidades
+          financeiras em oportunidades de impacto sustentável, alinhada aos Objetivos de Desenvolvimento Sustentável da
+          ONU.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ODS Section -->
+  <section class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Alinhamento com os ODS</h2>
+      <p class="text-muted mb-5">Contribuindo para os Objetivos de Desenvolvimento Sustentável da ONU</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-recycle fs-1 text-primary"></i></div>
+            <h5 class="fw-bold text-primary">ODS 12</h5>
+            <p class="text-muted small">Promovemos a reutilização e extensão da vida útil de produtos, reduzindo o
+              desperdício e incentivando padrões de consumo sustentáveis.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-book fs-1 text-secondary"></i></div>
+            <h5 class="fw-bold text-secondary">ODS 4</h5>
+            <p class="text-muted small">Facilitamos o acesso a materiais educacionais acessíveis, democratizando recursos
+              acadêmicos para todos os estudantes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-building fs-1 text-success"></i></div>
+            <h5 class="fw-bold text-success">ODS 11</h5>
+            <p class="text-muted small">Fortalecemos comunidades universitárias locais através de transações seguras e
+              proximidade geográfica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="py-5" style="background-color: var(--surface)">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Nosso Impacto em Números</h2>
+      <p class="text-muted mb-5">Resultados concretos da nossa comunidade sustentável</p>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-secondary fw-bold">8.742</h3>
+            <p class="text-muted small">Produtos Reutilizados</p>
+            <span class="text-success small">+23% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-primary fw-bold">2,3 ton</h3>
+            <p class="text-muted small">CO₂ Evitado</p>
+            <span class="text-success small">+18% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-accent fw-bold">R$ 1,2M</h3>
+            <p class="text-muted small">Economizados</p>
+            <span class="text-success small">+31% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-warning fw-bold">15.234</h3>
+            <p class="text-muted small">Estudantes Ativos</p>
+            <span class="text-success small">+12% este mês</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Calculator -->
+      <div class="bg-white rounded-4 p-5 shadow-sm text-start">
+        <h3 class="fw-bold mb-4 text-center">Calculadora de Impacto Pessoal</h3>
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Produtos que você vendeu</label>
+              <input type="number" id="soldItems" class="form-control" placeholder="0" min="0" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Produtos que você comprou</label>
+              <input type="number" id="boughtItems" class="form-control" placeholder="0" min="0" />
+            </div>
+            <button onclick="calculateImpact()" class="btn btn-primary-custom w-100">Calcular Meu Impacto</button>
+          </div>
+          <div class="col-md-6 bg-light rounded-3 p-4">
+            <h5 class="fw-semibold mb-3">Seu Impacto Sustentável</h5>
+            <div class="d-flex justify-content-between">
+              <span>CO₂ evitado:</span><span id="co2Impact">0 kg</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Economia gerada:</span><span id="savingsImpact">R$ 0</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Produtos salvos:</span><span id="itemsImpact">0 itens</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Faça Parte da Mudança</h2>
+      <p class="lead mb-4">Junte-se a milhares de estudantes que já escolheram um consumo mais inteligente e sustentável.</p>
+      <a href="homepage.html" class="btn btn-light text-primary fw-semibold me-2">Explorar Produtos</a>
+      <a href="user_dashboard.html" class="btn btn-secondary fw-semibold text-white">Começar a Vender</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <h5 class="text-white">UniMarket</h5>
+          <p class="small text-muted">Transformando consumo estudantil em impacto sustentável através da economia
+            circular no campus.</p>
+        </div>
+        <div class="col-md-3">
+          <h6>Links Rápidos</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Categorias</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Eletrônicos</a></li>
+            <li><a href="#">Materiais Acadêmicos</a></li>
+            <li><a href="#">Móveis</a></li>
+            <li><a href="#">Livros</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Contato</h6>
+          <ul class="list-unstyled small">
+            <li>contato@unimarket.com.br</li>
+            <li>(11) 9999-9999</li>
+            <li>São Paulo, SP</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <p class="text-center small text-muted mb-0">© 2025 UniMarket. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function calculateImpact() {
+      const soldItems = parseInt(document.getElementById('soldItems').value) || 0;
+      const boughtItems = parseInt(document.getElementById('boughtItems').value) || 0;
+      const totalItems = soldItems + boughtItems;
+
+      const co2PerItem = 0.26;
+      const savingsPerItem = 137;
+
+      const co2Impact = (totalItems * co2PerItem).toFixed(1);
+      const savingsImpact = (totalItems * savingsPerItem).toFixed(0);
+
+      document.getElementById('co2Impact').textContent = `${co2Impact} kg`;
+      document.getElementById('savingsImpact').textContent = `R$ ${savingsImpact}`;
+      document.getElementById('itemsImpact').textContent = `${totalItems} itens`;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
