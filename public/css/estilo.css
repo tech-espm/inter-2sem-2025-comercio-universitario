@@ -33,3 +33,203 @@ html, body {
 	color: white;
 	text-decoration: none;
 }
+
+.navbar-brand span {
+      color: var(--primary);
+      font-weight: 700;
+}
+
+ /* --------------------------- Style Home Page ---------------------------------- */
+:root {
+      --primary: #d96c80;
+      --secondary: #bfb74b;
+      --accent: #bf2a52;
+      --text-dark: #222;
+      --text-muted: #666;
+      --surface: #f9f9fb;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: var(--surface);
+      color: var(--text-dark);
+    }
+
+	 .form-control{
+      background-color: #f2e9ce45;
+    }
+
+    .btn-primary-custom {
+      background-color: var(--accent);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .btn-primary-custom:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn-outline-custom {
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .btn-outline-custom:hover {
+      background-color: var(--secondary);
+      color: #fff;
+    }
+
+    .section-title {
+      color: var(--text-dark);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-home {
+      background: linear-gradient(137deg, #f2ae2e37, #bf2a5237);
+      padding: 5rem 0;
+    }
+
+    .hero-home h1 span {
+      color: var(--primary);
+    }
+
+    .card-category {
+      border: none;
+      border-radius: 1rem;
+      background: #fff;
+      transition: all .3s ease;
+    }
+
+    .card-category:hover {
+      box-shadow: 0 8px 24px rgba(234, 102, 111, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .card-category .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #111;
+      color: #bbb;
+      padding: 3rem 1rem;
+    }
+
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+    
+    .bg-coracao {
+      background-color: #d96c80;
+    }
+    
+    .bg-caixa {
+      background-color: #bf2a52;
+    }
+
+    .bg-dolar {
+      background-color: #bfb74b;
+    
+    }
+    .bg-pessoa {
+      background-color: #f2ae2e;
+    }
+
+    .text-coracao {
+      color: #d96c80;
+    }
+
+    .text-caixa {
+      color: #bf2a52;
+    }
+
+    .text-dolar {
+      color: #bfb74b;
+    }
+
+    .text-pessoa {
+      color: #f2ae2e;
+    }
+    
+    .logo{
+      max-width: 80px;
+    }
+	
+    
+ /* --------------------------- Style Category Page ---------------------------------- */
+
+    .hero-category {
+      background: linear-gradient(-160deg, #bfb74b64, #d96c8080);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .category-btn {
+      border: none;
+      border-radius: 0.75rem;
+      background-color: #fff;
+      color: var(--primary);
+      font-weight: 500;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .category-btn.active, .category-btn:hover {
+      background-color: #f2ae2e;
+      color: #fff;
+    }
+
+    .filter-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .product-card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .guide-card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .badge-pill {
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      padding: 0.35em 0.75em;
+    }
+
+    .text-titulos {
+    --bs-text-opacity: 1;
+    color: black
+    }

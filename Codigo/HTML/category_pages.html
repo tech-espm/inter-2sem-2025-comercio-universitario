@@ -9,140 +9,9 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link href="../../public/css/estilo.css" rel="stylesheet" />
 
-  <style>
-    :root {
-      --titulostext-titulos: #d96c80;
-      --secondary: #bfb74b;
-      --accent: #bf2a52;
-      --text-dark: #222;
-      --text-muted: #666;
-      --surface: #f9f9fb;
-    }
-
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      background-color: #fff;
-      color: var(--text-dark);
-    }
-
-    .navbar-brand span {
-      color: var(--titulostext-titulos);
-      font-weight: 700;
-    }
-
-    .hero {
-      background: linear-gradient(-160deg, #bfb74b64, #d96c8080);
-      color: #fff;
-      text-align: center;
-      padding: 6rem 1rem;
-    }
-
-    .category-btn {
-      border: none;
-      border-radius: 0.75rem;
-      background-color: #fff;
-      color: var(--titulostext-titulos);
-      font-weight: 500;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .category-btn.active, .category-btn:hover {
-      background-color: #f2ae2e;
-      color: #fff;
-    }
-
-    .filter-card {
-      border-radius: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-
-    .product-card {
-      border: none;
-      border-radius: 1rem;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .guide-card {
-      border-radius: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .guide-card:hover {
-      transform: translateY(-4px);
-    }
-
-    footer {
-      background-color: #111;
-      color: #bbb;
-      padding: 3rem 1rem;
-    }
-
-    footer a {
-      color: #bbb;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-
-    .badge-pill {
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      padding: 0.35em 0.75em;
-    }
-
-    .bg-coracao {
-      background-color: #d96c80;
-    }
-    
-    .bg-caixa {
-      background-color: #bf2a52;
-    }
-
-    .bg-dolar {
-      background-color: #bfb74b;
-    
-    }
-    .bg-pessoa {
-      background-color: #f2ae2e;
-    }
-
-    .text-coracao {
-      color: #d96c80;
-    }
-
-    .text-caixa {
-      color: #bf2a52;
-    }
-
-    .text-dolar {
-      color: #bfb74b;
-    }
-
-    .text-pessoa {
-      color: #f2ae2e;
-    }
-
-    .logo{
-      max-width: 80px;
-    }
-
-    .text-titulos {
-    --bs-text-opacity: 1;
-    color: black
-    }
-
-  </style>
 </head>
 
 <body>
@@ -187,7 +56,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero-category">
     <div class="container">
       <h1 class="fw-bold mb-3">Explore pelas <span style= 'color: var(--accent)'>Categorias</span></h1>
       <p class="lead mx-auto w-75">Encontre exatamente o que você precisa para seus estudos com filtros inteligentes e proximidade no campus.</p>
