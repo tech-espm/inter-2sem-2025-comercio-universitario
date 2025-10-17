@@ -15,6 +15,14 @@ router.get("/sobre", wrap(async (req, res) => {
 	res.render("index/sobre", opcoes);
 }));
 
+router.get("/perfil", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Perfil"
+	};
+
+	res.render("index/perfil", opcoes);
+}));
+
 router.get("/produtos", wrap(async (req, res) => {
 	let produtoA = {
 		id: 1,
