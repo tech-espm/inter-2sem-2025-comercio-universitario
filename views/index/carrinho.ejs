@@ -1,0 +1,178 @@
+<!-- Breadcrumb -->
+  <section class="py-3 bg-light">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="homepage.html" class="text-decoration-none text-muted">Início</a></li>
+          <li class="breadcrumb-item active text-primary" aria-current="page">Finalizar Compra</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Checkout form -->
+        <div class="col-lg-8">
+          <!-- Etapas -->
+          <div class="section-card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="fw-bold text-primary mb-0">Finalizar Compra</h4>
+              <div class="d-flex align-items-center gap-2">
+                <div class="progress-step">1</div>
+                <div style="width:40px;height:3px;background-color:var(--primary);"></div>
+                <div class="progress-step">2</div>
+                <div style="width:40px;height:3px;background-color:#ddd;"></div>
+                <div class="progress-step inactive">3</div>
+              </div>
+            </div>
+            <small class="text-muted">Informações → Retirada → Confirmação</small>
+          </div>
+
+          <!-- Contato -->
+          <div class="section-card">
+            <h5 class="fw-semibold mb-3 text-primary">Informações de Contato</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" value="João Silva Santos" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Universitário</label>
+                <input type="email" class="form-control" value="joao.santos@usp.br" readonly>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">WhatsApp</label>
+                <input type="tel" class="form-control" value="(11) 99999-9999">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Curso</label>
+                <input type="text" class="form-control" value="Engenharia de Computação" readonly>
+              </div>
+            </div>
+          </div>
+
+          <!-- Retirada -->
+          <div class="section-card">
+            <h5 class="fw-semibold mb-3 text-primary">Local de Retirada</h5>
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="pickup" checked>
+              <label class="form-check-label">
+                <strong>Campus – Praça do Relógio</strong><br>
+                <small class="text-muted">Local público e seguro no centro do campus <span class="badge badge-soft-success ms-2">Recomendado</span></small>
+              </label>
+            </div>
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="pickup">
+              <label class="form-check-label">
+                <strong>Biblioteca Central</strong><br>
+                <small class="text-muted">Entrada principal da biblioteca</small>
+              </label>
+            </div>
+            <div class="form-check border rounded p-3 mb-4">
+              <input class="form-check-input" type="radio" name="pickup">
+              <label class="form-check-label">
+                <strong>Estação Cidade Universitária</strong><br>
+                <small class="text-muted">Saída principal do metrô <span class="badge badge-soft-warning ms-2">Movimentado</span></small>
+              </label>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Data Preferida</label>
+                <input type="date" class="form-control" value="2025-10-13">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Horário Preferido</label>
+                <select class="form-select">
+                  <option>Manhã (8h - 12h)</option>
+                  <option selected>Tarde (12h - 18h)</option>
+                  <option>Noite (18h - 22h)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Observações (opcional)</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagamento -->
+          <div class="section-card">
+            <h5 class="fw-semibold mb-3 text-primary">Forma de Pagamento</h5>
+            <div class="alert alert-warning small">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              Este é um protótipo. Nenhuma transação real será processada.
+            </div>
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="payment" checked>
+              <label class="form-check-label">
+                <strong>PIX</strong> — pagamento instantâneo <span class="badge badge-soft-success ms-2">Recomendado</span>
+              </label>
+            </div>
+            <div class="form-check border rounded p-3 mb-2">
+              <input class="form-check-input" type="radio" name="payment">
+              <label class="form-check-label"><strong>Cartão de Crédito</strong> — Visa, Mastercard, Elo</label>
+            </div>
+            <div class="form-check border rounded p-3">
+              <input class="form-check-input" type="radio" name="payment">
+              <label class="form-check-label"><strong>Dinheiro</strong> — pagamento na retirada</label>
+            </div>
+          </div>
+
+          <!-- Segurança -->
+          <div class="section-card bg-light border border-primary-subtle">
+            <h5 class="fw-semibold text-primary mb-3">Diretrizes de Segurança</h5>
+            <ul class="list-unstyled small mb-0">
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Encontre-se em locais públicos e movimentados.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Verifique a identidade do vendedor.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Teste o produto antes de pagar.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mantenha a comunicação dentro da plataforma.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Resumo -->
+        <div class="col-lg-4">
+          <div class="section-card sticky-top" style="top: 90px;">
+            <h5 class="fw-semibold mb-4 text-primary">Resumo do Pedido</h5>
+            <div class="mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80" class="product-thumb me-3" alt="MacBook Pro">
+                <div><strong>MacBook Pro 13"</strong><br><small class="text-muted">R$ 3.200</small></div>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80" class="product-thumb me-3" alt="Livros">
+                <div><strong>Livros de Cálculo I e II</strong><br><small class="text-muted">R$ 180</small></div>
+              </div>
+              <div class="d-flex align-items-center">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80" class="product-thumb me-3" alt="Cadeira">
+                <div><strong>Cadeira Ergonômica</strong><br><small class="text-muted">R$ 350</small></div>
+              </div>
+            </div>
+
+            <hr>
+            <div class="d-flex justify-content-between small mb-2"><span>Subtotal</span><span>R$ 3.730</span></div>
+            <div class="d-flex justify-content-between small mb-3"><span>Taxa de serviço</span><span>R$ 0</span></div>
+            <div class="d-flex justify-content-between fw-bold mb-4"><span>Total</span><span class="text-primary">R$ 3.730</span></div>
+
+            <div class="alert alert-secondary small">
+              <i class="bi bi-clock me-2"></i>Retirada disponível em <strong>2-4 horas</strong> após confirmação.
+            </div>
+
+            <button class="btn btn-primary-custom w-100 mb-2">Finalizar Pedido</button>
+            <a href="homepage.html" class="d-block text-center text-muted small">Continuar Comprando</a>
+
+            <hr class="my-4" />
+            <div class="text-center small text-muted">
+              <i class="bi bi-shield-check text-success me-1"></i> Transação Segura
+              <span class="mx-2">|</span>
+              <i class="bi bi-person-check text-primary me-1"></i> Vendedores Verificados
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

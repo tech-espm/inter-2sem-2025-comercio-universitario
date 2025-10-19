@@ -23,6 +23,22 @@ router.get("/perfil", wrap(async (req, res) => {
 	res.render("index/perfil", opcoes);
 }));
 
+router.get("/prod_detalhe", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Detalhe do Produto"
+	};
+
+	res.render("index/prod_detail", opcoes);
+}));
+
+router.get("/carrinho", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Carrinho de Compras"
+	};
+
+	res.render("index/carrinho", opcoes);
+}));
+
 router.get("/produtos", wrap(async (req, res) => {
 	let produtoA = {
 		id: 1,
