@@ -1,11 +1,127 @@
-<div class="container-fluid">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-3">Transformando <span>consumo</span> em impacto</h1>
+      <p class="lead mx-auto w-75">Somos a ponte entre a necessidade financeira estudantil e a consciência ambiental,
+        criando uma comunidade onde cada transação gera valor social e sustentável.</p>
+      <div class="bg-light text-dark rounded-4 p-4 mt-5 mx-auto w-75">
+        <h2 class="fw-bold mb-3">Nossa Missão</h2>
+        <p>Empoderar estudantes universitários brasileiros através de uma economia circular que transforma necessidades
+          financeiras em oportunidades de impacto sustentável, alinhada aos Objetivos de Desenvolvimento Sustentável da
+          ONU.</p>
+      </div>
+    </div>
+  </section>
 
-	<h1>
-		Sobre
-	</h1>
+  <!-- ODS Section -->
+  <section class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Alinhamento com os ODS</h2>
+      <p class="text-muted mb-5">Contribuindo para os Objetivos de Desenvolvimento Sustentável da ONU</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-recycle fs-1 text-primary"></i></div>
+            <h5 class="fw-bold text-primary">ODS 12</h5>
+            <p class="text-muted small">Promovemos a reutilização e extensão da vida útil de produtos, reduzindo o
+              desperdício e incentivando padrões de consumo sustentáveis.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-book fs-1 text-secondary"></i></div>
+            <h5 class="fw-bold text-secondary">ODS 4</h5>
+            <p class="text-muted small">Facilitamos o acesso a materiais educacionais acessíveis, democratizando recursos
+              acadêmicos para todos os estudantes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ods-card p-4 bg-light">
+            <div class="mb-3"><i class="bi bi-building fs-1 text-success"></i></div>
+            <h5 class="fw-bold text-success">ODS 11</h5>
+            <p class="text-muted small">Fortalecemos comunidades universitárias locais através de transações seguras e
+              proximidade geográfica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<p>
-		Sobre nós! 😊
-	</p>
+  <!-- Impact Section -->
+  <section class="py-5" style="background-color: var(--surface)">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Nosso Impacto em Números</h2>
+      <p class="text-muted mb-5">Resultados concretos da nossa comunidade sustentável</p>
 
-</div>
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-secondary fw-bold">8.742</h3>
+            <p class="text-muted small">Produtos Reutilizados</p>
+            <span class="text-success small">+23% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-primary fw-bold">2,3 ton</h3>
+            <p class="text-muted small">CO₂ Evitado</p>
+            <span class="text-success small">+18% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-accent fw-bold">R$ 1,2M</h3>
+            <p class="text-muted small">Economizados</p>
+            <span class="text-success small">+31% este mês</span>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="impact-card bg-white p-4">
+            <h3 class="text-warning fw-bold">15.234</h3>
+            <p class="text-muted small">Estudantes Ativos</p>
+            <span class="text-success small">+12% este mês</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Calculator -->
+      <div class="bg-white rounded-4 p-5 shadow-sm text-start">
+        <h3 class="fw-bold mb-4 text-center">Calculadora de Impacto Pessoal</h3>
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Produtos que você vendeu</label>
+              <input type="number" id="soldItems" class="form-control" placeholder="0" min="0" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Produtos que você comprou</label>
+              <input type="number" id="boughtItems" class="form-control" placeholder="0" min="0" />
+            </div>
+            <button onclick="calculateImpact()" class="btn btn-primary-custom w-100">Calcular Meu Impacto</button>
+          </div>
+          <div class="col-md-6 bg-light rounded-3 p-4">
+            <h5 class="fw-semibold mb-3">Seu Impacto Sustentável</h5>
+            <div class="d-flex justify-content-between">
+              <span>CO₂ evitado:</span><span id="co2Impact">0 kg</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Economia gerada:</span><span id="savingsImpact">R$ 0</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Produtos salvos:</span><span id="itemsImpact">0 itens</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Faça Parte da Mudança</h2>
+      <p class="lead mb-4">Junte-se a milhares de estudantes que já escolheram um consumo mais inteligente e sustentável.</p>
+      <a href="homepage.html" class="btn btn-light text-primary fw-semibold me-2">Explorar Produtos</a>
+      <a href="user_dashboard.html" class="btn btn-secondary fw-semibold text-white">Começar a Vender</a>
+    </div>
+  </section>

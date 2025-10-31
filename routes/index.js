@@ -28,7 +28,7 @@ router.get("/prod_detalhe", wrap(async (req, res) => {
 		titulo: "Detalhe do Produto"
 	};
 
-	res.render("index/prod_detail", opcoes);
+	res.render("index/prod_detalhe", opcoes);
 }));
 
 router.get("/carrinho", wrap(async (req, res) => {
