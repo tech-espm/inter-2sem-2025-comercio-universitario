@@ -55,10 +55,6 @@ html, body {
       color: var(--text-dark);
     }
 
-	 .form-control{
-      background-color: #f2e9ce45;
-    }
-
     .btn-primary-custom {
       background-color: var(--accent);
       border: none;
@@ -135,6 +131,10 @@ html, body {
       color: #fff;
     }
     
+    .bg-paginas {
+      background-color: #f2e9ce45;
+    }
+
     .bg-coracao {
       background-color: #d96c80;
     }
