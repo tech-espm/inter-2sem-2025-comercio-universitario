@@ -79,4 +79,42 @@ router.get("/produtos", wrap(async (req, res) => {
 	res.render("index/produtos", opcoes);
 }));
 
+router.get("/cadastrar", wrap(async (req, res) => {
+	let opcoes = {
+		titulo: "Cadastro de Produtos"
+	};
+
+	res.render("index/cadastrar", opcoes);
+}));
+
+router.post("/api/cadastrar", wrap(async (req, res) => {
+	
+	let produto = req.body;
+
+	if (!produto.nome) {
+		res.status(400).json("Nome inválido!");
+		return;
+	}
+
+	if (!produto.descricao) {
+		res.status(400).json("Descrição inválida!");
+		return;
+	}
+
+	await sql.connect(async sql => {
+		// Tudo aqui dentro é executado com a conexão aberta!
+
+		let parametros = [
+			produto.nome,
+			produto.descricao
+		];
+
+		await sql.query("insert into produto (nome, descricao) values (?, ?)", parametros);
+
+		//...
+	});
+
+	res.json(true);
+}));
+
 module.exports = router;
