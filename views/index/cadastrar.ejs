@@ -16,6 +16,34 @@
 			</div>
 		</div>
 
+		<div class="col-sm-6">
+			<div class="mb-3">
+				<label class="form-label" for="inputEndereco">Endereço</label>
+				<input class="form-control" type="text" maxlength="100" id="inputEndereco" />
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<div class="mb-3">
+				<label class="form-label" for="inputValor">Valor</label>
+				<input class="form-control" type="number" min="1" max="999999" id="inputValor" />
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<div class="mb-3">
+				<label class="form-label" for="inputNota">Nota</label>
+				<input class="form-control" type="number" min="1" max="5" id="inputNota" />
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+			<div class="mb-3">
+				<label class="form-label" for="inputImagem">Imagem</label>
+				<input class="form-control" type="file" id="inputImagem" accept="image/jpeg" />
+			</div>
+		</div>
+
 	</div>
 
 	<div class="text-center">
@@ -30,9 +58,16 @@
 
 		let inputNome = document.getElementById("inputNome");
 		let inputDescricao = document.getElementById("inputDescricao");
+		let inputEndereco = document.getElementById("inputEndereco");
+		let inputValor = document.getElementById("inputValor");
+		let inputNota = document.getElementById("inputNota");
+		let inputImagem = document.getElementById("inputImagem");
 
 		let nome = inputNome.value;
 		let descricao = inputDescricao.value;
+		let endereco = inputEndereco.value;
+		let valor = parseFloat(inputValor.value);
+		let nota = parseFloat(inputNota.value);
 
 		if (!nome) {
 			alert("Nome inválido!");
@@ -44,19 +79,39 @@
 			return;
 		}
 
-		let produto = {
-			"nome": nome,
-			"descricao": descricao
-		};
+		if (!endereco) {
+			alert("Endereço inválida!");
+			return;
+		}
+
+		if (!valor) {
+			alert("Valor inválida!");
+			return;
+		}
+
+		if (!nota) {
+			alert("Nota inválida!");
+			return;
+		}
+
+		if (!inputImagem.files || !inputImagem.files[0]) {
+			alert("Imagem inválida!");
+			return;
+		}
+
+		let formData = new FormData();
+		formData.append("nome", nome);
+		formData.append("descricao", descricao);
+		formData.append("endereco", endereco);
+		formData.append("valor", valor);
+		formData.append("nota", nota);
+		formData.append("imagem", inputImagem.files[0]);
 
 		try {
 
 			let response = await fetch("/api/cadastrar", {
 				method: "POST",
-				body: JSON.stringify(produto),
-				headers: {
-					"content-type": "application/json"
-				}
+				body: formData,
 			});
 
 			if (!response.ok) {
@@ -66,6 +121,10 @@
 
 			inputNome.value = "";
 			inputDescricao.value = "";
+			inputEndereco.value = "";
+			inputValor.value = "";
+			inputNota.value = "";
+			inputImagem.value = "";
 
 			alert("Produto criado com sucesso!");
 

@@ -60,7 +60,7 @@
       <!-- Produtos -->
       <main class="col-lg-9">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h4 class="fw-bold text-titulos">Eletrônicos</h4>
+          <h4 class="fw-bold text-titulos">Produtos</h4>
           <select class="form-select w-auto">
             <option>Mais recentes</option>
             <option>Menor preço</option>
@@ -69,46 +69,20 @@
         </div>
 
         <div class="row g-4">
+          <% for (let i = 0; i < produtos.length; i++) { %>
           <div class="col-md-4">
             <div class="card product-card h-100">
-              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80" class="card-img-top " alt="MacBook Pro">
+              <img src="/public/img/produtos/<%= produtos[i].id %>.jpg" class="card-img-top " alt="<%= produtos[i].nome %>">
               <div class="card-body">
-                <h6 class="fw-bold text-titulos">MacBook Pro 13” 2020</h6>
-                <p class="text-muted small mb-2">Usado – Excelente estado</p>
-                <p class="fw-bold">R$ 3.200</p>
-                <div class="text-warning"><i class="bi bi-star-fill"></i> 4.9</div>
+                <h6 class="fw-bold text-titulos"><%= produtos[i].nome %></h6>
+                <p class="text-muted small mb-2"><%= produtos[i].descricao %></p>
+                <p class="fw-bold">R$ <%= produtos[i].valor.toFixed(2) %></p>
+                <div class="text-warning"><i class="bi bi-star-fill"></i> <%= produtos[i].nota.toFixed(1) %></div>
               </div>
             </div>
           </div>
+          <% } %>
 
-          <div class="col-md-4">
-            <div class="card product-card h-100">
-              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80" class="card-img-top" alt="Tablet Samsung">
-              <div class="card-body">
-                <h6 class="fw-bold text-titulos">Tablet Samsung Tab S7</h6>
-                <p class="text-muted small mb-2">Usado – Muito bom estado</p>
-                <p class="fw-bold">R$ 850</p>
-                <div class="text-warning"><i class="bi bi-star-fill"></i> 4.7</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card product-card h-100">
-              <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" class="card-img-top" alt="iPhone 12">
-              <div class="card-body">
-                <h6 class="fw-bold text-titulos">iPhone 12 128GB</h6>
-                <p class="text-muted small mb-2">Usado - Bom estado</p>
-                <p class="fw-bold">R$ 1.850</p>
-                <div class="text-warning"><i class="bi bi-star-fill"></i> 4.5</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-5">
-          <button class="btn btn-outline-titulostext-titulos px-4">Carregar mais produtos</button>
-        </div>
       </main>
     </div>
   </div>
