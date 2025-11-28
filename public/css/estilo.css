@@ -131,7 +131,14 @@
       max-width: 80px;
     }
 
-    
+    .topinho { 
+      padding-top: 20px;
+    }
+
+    .form-check-input:checked {
+    background-color: #bf2a52;
+    border-color: #bf2a52;
+    }
     
     
     /* --------------------------- Style Category Page ---------------------------------- */
