@@ -10,8 +10,7 @@ USE comerciouniversitario;
 CREATE TABLE produto (
   id int NOT NULL AUTO_INCREMENT,
   nome varchar(100) NOT NULL,
-  descricao varchar(200) NOT NULL,
-  endereco varchar(100) NOT NULL,
+  descricao varchar(2000) NOT NULL,
   valor float NOT NULL,
   data datetime NOT NULL,
   PRIMARY KEY (id)

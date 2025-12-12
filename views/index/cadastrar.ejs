@@ -12,14 +12,7 @@
 		<div class="col-sm-6">
 			<div class="mb-3">
 				<label class="form-label" for="inputDescricao">Descrição</label>
-				<input class="form-control" type="text" maxlength="200" id="inputDescricao" />
-			</div>
-		</div>
-
-		<div class="col-sm-6">
-			<div class="mb-3">
-				<label class="form-label" for="inputEndereco">Endereço</label>
-				<input class="form-control" type="text" maxlength="100" id="inputEndereco" />
+				<input class="form-control" type="text" maxlength="2000" id="inputDescricao" />
 			</div>
 		</div>
 
@@ -47,7 +40,7 @@
 	</div>
 
 	<div class="text-center">
-		<button type="button" class="btn btn-primary" onclick="cadastrarProduto()">Cadastrar Produto</button>
+		<button type="button" class="btn btn-primary-custom" onclick="cadastrarProduto()">Cadastrar Produto</button>
 	</div>
 
 </div>
@@ -58,14 +51,12 @@
 
 		let inputNome = document.getElementById("inputNome");
 		let inputDescricao = document.getElementById("inputDescricao");
-		let inputEndereco = document.getElementById("inputEndereco");
 		let inputValor = document.getElementById("inputValor");
 		let inputNota = document.getElementById("inputNota");
 		let inputImagem = document.getElementById("inputImagem");
 
 		let nome = inputNome.value;
 		let descricao = inputDescricao.value;
-		let endereco = inputEndereco.value;
 		let valor = parseFloat(inputValor.value);
 		let nota = parseFloat(inputNota.value);
 
@@ -76,11 +67,6 @@
 
 		if (!descricao) {
 			alert("Descrição inválida!");
-			return;
-		}
-
-		if (!endereco) {
-			alert("Endereço inválida!");
 			return;
 		}
 
@@ -102,7 +88,6 @@
 		let formData = new FormData();
 		formData.append("nome", nome);
 		formData.append("descricao", descricao);
-		formData.append("endereco", endereco);
 		formData.append("valor", valor);
 		formData.append("nota", nota);
 		formData.append("imagem", inputImagem.files[0]);
@@ -121,7 +106,6 @@
 
 			inputNome.value = "";
 			inputDescricao.value = "";
-			inputEndereco.value = "";
 			inputValor.value = "";
 			inputNota.value = "";
 			inputImagem.value = "";
